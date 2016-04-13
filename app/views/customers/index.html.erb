@@ -1,3 +1,6 @@
 <% Customer.find_each.each do |cust| %>
-	<%= cust.firstname %><br>
+	<%= link_to "/customers/#{cust.customerid}" do %>
+		<%= cust.customerid %>: <%= cust.firstname %> <%= cust.lastname %>
+	<% end %>
+	<br>
 <% end %>

@@ -1,0 +1,19 @@
+<%= form_tag("/orders/search", method: "get") do %>
+  <%= label_tag(:order_query, "Order number:") %>
+  <%= text_field_tag(:order_query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_tag("/customers/search", method: "get") do %>
+  <%= label_tag(:name_query, "Customer name:") %>
+  <%= text_field_tag(:name_query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_tag("/customers/search", method: "get") do %>
+  <%= label_tag(:email_query, "Customer email:") %>
+  <%= text_field_tag(:email_query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
