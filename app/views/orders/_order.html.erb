@@ -1,0 +1,8 @@
+<%= order.id %>: <%= order.orderdate %><br><br>
+<%= link_to("/customers/#{order.customer.customerid}") do %>
+      	<%= order.customer.customerid %>: <%= order.customer.firstname %> <%= order.customer.lastname %>
+<% end %>
+<br><br>
+<% order.orderdetails.each do |opt| %>
+	<%= render partial: "/orders/order_detail", object: opt %>
+<% end %>	
