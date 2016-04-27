@@ -1,3 +1,41 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'theme';
+
+div.customer-info {
+	clear: left;
+}
+
+div.orders-header {
+	padding-bottom: 10px;
+}
+
+
+div.search-frame {
+	height: 10%;
+	width: 40%;
+	position: fixed;
+	top: 45%;
+	left: 30%;
+	text-align: center;
+	font-size: 1.6em;
+	form {
+		width: 100%;
+		input[type=text] {
+			background-color: $content-bg;
+			border: 1px solid $text-primary;
+			color: $text-primary;
+			font-size: 0.8em;
+		}
+
+		input[type=submit] {
+			background-color: $content-bg;
+			border: 1px solid $text-primary;
+			color: $text-primary;
+			font-size: 0.7em;
+		}
+	}
+}
+

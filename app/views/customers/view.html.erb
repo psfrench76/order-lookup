@@ -1,7 +1,0 @@
-<%= render partial: "customer_info", locals: { customer: @customer } %><br><br>
-
-<%= @customer.firstname %>'s orders:<br>
-<% @orders.each do |ord| %>
-	<hr>      
-	<%= render partial: "/orders/order", object: ord %><br>
-<% end %>

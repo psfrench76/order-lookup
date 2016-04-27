@@ -1,24 +1,21 @@
 class CustomersController < ApplicationController
-  def view
+  def show
     @customer = Customer.find(params[:id])
     @orders = @customer.orders
   end
   def index
   end
-  def search
-    if query = params[:name_query]
-      first, last = query.split(' ', 2)
-      if cust = Customer.find_by_firstname_and_lastname(first, last)
-        redirect_to "/customers/#{cust.customerid}"
-      else
-        redirect_to root_path
-      end
-    elsif query = params[:email_query]
-      if cust = Customer.find_by_emailaddress(query)
-        redirect_to "/customers/#{cust.customerid}"
-      else
-        redirect_to root_path
-      end
-    end
-  end
+#  def search
+#    if query = params[:global_query]
+#      searches = Customer.order_searches query     
+#      searches.each do |method, priority|
+#        if result = Customer.send(method, query)
+#          puts searches
+#          redirect_to result
+#          return
+#        end
+#      end
+#      redirect_to root_path
+#    end
+#  end
 end

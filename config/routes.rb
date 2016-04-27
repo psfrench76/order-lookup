@@ -1,19 +1,8 @@
 Rails.application.routes.draw do
   root 'orders#index'
-  get 'order_details/view'
-
-  get 'orders/view'
-  get 'orders/search'
-  get 'options/view'
-
-#  get 'customers/view'
-  get 'customers/index'
-  get 'customers/search'
+  get '/search' => 'application#search'
+  resources :customers, :orders, :order_details, :options
   
-  get 'orders/index'
-  get 'customers/:id' => 'customers#view'
-  get 'order_details/:id' => 'order_details#view'
-  get 'orders/:id' => 'orders#view'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

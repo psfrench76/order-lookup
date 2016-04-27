@@ -1,0 +1,116 @@
+//@import 'bluetheme';
+@import 'theme';
+html {
+	min-height: 100%;
+	position: relative;
+
+}
+
+body {
+	height: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: $body-bg;
+	font-family: $font-stack;
+	color: $text-primary;
+}
+
+a {
+	text-decoration: none;
+	color: $link-color;
+}
+
+a:hover {
+	color: $text-primary;
+}
+
+hr {
+	clear: both;
+	border: 0;
+	height: 1px;
+	background: $text-primary;
+	background-image: linear-gradient(to right, $text-secondary, $text-primary, $text-secondary);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#background {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	overflow: scroll;
+}
+
+
+div.content-frame {
+	background-color: $content-bg;
+	width: 66%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	min-height: 100%;
+	box-shadow: 0px 5px 11px $text-primary;
+}
+
+div.container {
+	padding: 15px;
+}
+
+div.title-block {
+	float: right;
+	clear: none;
+	margin-bottom: 20px;
+}
+	
+h2 {
+	font-family: $font-stack;
+	color: $text-primary;
+	font-weight: normal;
+	margin: 0px;
+}
+
+div.header-block {
+	font-size: 1.4em;
+	float: left;
+	margin-bottom: 20px;
+}
+
+div.footer-block {
+	position: fixed;
+	bottom: 20px;
+	left: 17.13%;
+	width: 66%;
+}
+
+div.help-block {
+	position: fixed;
+	right: 10px;
+	top: 0px;
+	width: 100px;
+	height: 25px;
+	padding: 15px;
+	box-shadow: 0px 5px 11px $text-primary;
+	transition: width 1s ease 0.3s, height 1s ease 0.3s;
+	#help-content {
+		transition: opacity 0.7s;
+		opacity: 0;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+}
+
+div.help-block:hover {
+	height: 400px;
+	width: 13%;
+	transition-delay: 0s;
+	#help-content {
+		opacity: 1;
+		transition-delay: 0.5s;
+	}
+}
+

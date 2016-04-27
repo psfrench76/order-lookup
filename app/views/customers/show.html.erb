@@ -1,0 +1,17 @@
+<hr>
+<div class="customer-info">
+<%= render partial: "customer_info" %>
+</div>
+
+<hr>
+<div class="orders-header">
+	<%= @customer.firstname %>'s orders:
+</div>
+<div class="orders-wrapper">
+<% @orders.each do |ord| %>
+	<div class="order-container">	
+		<%= render partial: "/orders/order", object: ord %>
+	</div>
+	<hr>
+<% end %>
+</div>

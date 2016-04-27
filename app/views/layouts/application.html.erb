@@ -7,8 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= link_to "Start Over", root_path %><br><br>
-<%= yield %>
-
+	<div id="background">
+		<div class="content-frame">
+			<div class="container">
+				<div class="header-block">
+					<%= link_to "Start Over", root_path %>
+				</div>
+				<div class="title-block">
+					<h2>Order Lookup</h2>
+				</div>
+				<%= yield %>
+			</div>
+		</div>
+		<div class="help-block">
+			Help me...
+			<div id="help-content"><p>Possible search terms:</p>
+				<ul>
+					<li>Order Number</li>
+					<li>Customer Name</li>
+					<li>Customer E-mail</li>
+					<li>Customer Address</li>
+				</ul>	
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 class OrderDetailsController < ApplicationController
-  def view
+  def show
 	@order_detail = Orderdetail.find_by orderdetailid: params[:id]
 	@order = @order_detail.order
 	@customer = @order.customer

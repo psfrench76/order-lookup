@@ -1,19 +1,18 @@
-<%= form_tag("/orders/search", method: "get") do %>
-  <%= label_tag(:order_query, "Order number:") %>
-  <%= text_field_tag(:order_query) %>
+<%= @top_message %>
+<% if result = params[:result] and result == "none" %>
+	<hr>
+	<div class="error-msg">
+		No results found. Please try a different search.
+	</div>
+	<hr>
+<% end %>
+<div class="search-frame">
+<%= form_tag("/search", method: "get") do %>
+	<!--  <%= label_tag(:global_query, "SEARCH EVERYTHING:") %> -->
+  <%= text_field_tag(:global_query) %>
   <%= submit_tag("Search") %>
 <% end %>
-
-<%= form_tag("/customers/search", method: "get") do %>
-  <%= label_tag(:name_query, "Customer name:") %>
-  <%= text_field_tag(:name_query) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<%= form_tag("/customers/search", method: "get") do %>
-  <%= label_tag(:email_query, "Customer email:") %>
-  <%= text_field_tag(:email_query) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-
+<div class="footer-block">
+	Please enter a search term
+</div>
+</div>

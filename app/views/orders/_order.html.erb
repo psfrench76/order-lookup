@@ -1,6 +1,8 @@
-<%= order.id %>: <%= order.orderdate %><br><br>
-<%= link_to("/customers/#{order.customer.customerid}") do %>
-      	<%= order.customer.customerid %>: <%= order.customer.firstname %> <%= order.customer.lastname %>
+<%= link_to(order.id, order) %>: <%= order.orderdate %><br><br>
+<% if order.customer %>
+	<%= link_to(order.customer) do %>
+      		Customer: <%= order.customer.firstname %> <%= order.customer.lastname %>
+	<% end %>
 <% end %>
 <br><br>
 <% order.orderdetails.each do |opt| %>
